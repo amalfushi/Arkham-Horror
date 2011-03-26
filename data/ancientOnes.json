@@ -1,0 +1,54 @@
+{"ancientOnes": [
+	{
+		"name": "Azathoth",
+		"img": "",
+		"expansion": "",
+		"combatRating": "",
+		"defenses": "None",
+		"worshippers": " Since Azathoth promises nothing except destruction, only the insane worship him. However, their fanaticism gives them strength. Maniacs have their toughness increased by 1.",
+		"activeText": ["Maniacs have +1 toughness "],
+		"power": " Absolute Destruction - If Azathoth awakens, the game is over and the investigators lose.",
+		"startOfBattle": ,
+		"attack": " The end is here! Azathoth destroys the world.",
+		"doomTrack": 14
+	},
+	{
+		"name": "Cthulhu",
+		"img": "",
+		"expansion": "",
+		"combatRating": " -6",
+		"defenses": "Special (See Attack)",
+		"worshippers": "Cthulhu's worshippers often have the Innsmouth Look, a sign of monstrous ancestors. Cultists have a horror rating of -2 and a horror damage of 2 Sanity.",
+		"activeText": ["Cultists horror rating is -2 and a horror damage of 2 Sanity", "Investigators have -1 to max Sanity and max Stamina"],
+		"power": "Dreams of Madness - While Cthulhu stirs in his slumber, investigators have their maximum Sanity and maximum Stamina reduced by 1.",
+		"startOfBattle": ,
+		"attack": "Each investigator lowers either his maximum Sanity or Maximum Stamina by 1 (his choice). After Cthulhu attacks 1 doom token is placed back on Cthulhu's doom track if it isn't already full.",
+		"doomTrack": 13
+	},
+	{
+		"name": "Hastur",
+		"img": "",
+		"expansion": "",
+		"combatRating": "-X",
+		"defenses": "Physical Resistance",
+		"worshippers": "Hastur's worshippers ride byakhee mounts that they call with enchanted whistles. Cultists are flying monsters and their combat rating is -2.",
+		"activeText": ["Cultists are flying monsters and their combat rating is -2", "The cost to seal a gate is 8 Clue tokens instead of 5"],
+		"power": "The King in Yellow - While Hastur stirs in his slumber, the cost to seal a gate is 8 Clue tokens instead of 5.",
+		"startOfBattle": "X is set to the current terror level",
+		"attack": "Each investigator must pass a Luck (+1) check or lose 2 Sanity. This check's modifier decreases by 1 each turn (+0 the 2nd turn, -1 the 3rd turn, etc.)",
+		"doomTrack": 13
+	},
+	{
+		"name": "Ithaqua",
+		"img": "",
+		"expansion": "",
+		"combatRating": "-3",
+		"defenses": "None",
+		"worshippers": " Ithaqua's worshippers eat the flesh of their fellow men, gaining supernatural power through their dark practice. Cultists have their toughness increased by 2.",
+		"activeText": ["Cultists have +2 toughness", "All weather cards are discarded without their special effects taking place", "Any investigator in a street area at the end of the Mythos phase loses 1 Stamina"],
+		"power": " Icy Winds - While Ithaqua stirs in his slumber, any investigator in a street area at the end of the Mythos phase loses 1 Stamina. In addition, all Weather cards are discarded without their special effects taking place.",
+		"startOfBattle": "Investigators must roll a die for every item they have, discarding the item on a failure",
+		"attack": " Each investigator must pass a Fight (+1) check or lose 2 Stamina. This check's modifier decreases by 1 each turn (+0 the 2nd turn, -1 the 3rd turn, etc.)",
+		"doomTrack": 11
+	}	
+}
