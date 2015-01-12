@@ -1,35 +1,11 @@
 <!DOCTYPE html>
- <html>
- <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-     <title>Arkham Horror</title>
-
-	 <!-- Sencha Touch CSS -->
-	 <link rel="stylesheet" href="resources/css/ext-touch.css" type="text/css">
-
-	 <!-- Custom CSS 
-	 <link rel="stylesheet" href="css/guide.css" type="text/css"> -->
-
-	 <!-- Sencha Touch JS -->
-	 <script type="text/javascript" src="ext-touch-debug.js"> </script>
-
-	 <!-- Application JS -->
-	 <script type="text/javascript">
-		var namesVec = new Array("inactiveDoomToken.png", "activeDoomToken.png", "ElderSign.png");
-		var imgRoot='resources/img/arkham/';
-
-		function cycleDoomToken(token){
-			nr = token.getAttribute('src').split('/');
-			nr = nr[nr.length-1]
-
-			if(nr==namesVec[0]){token.setAttribute('src',imgRoot+namesVec[1]);}
-			else if(nr==namesVec[1]){token.setAttribute('src',imgRoot+namesVec[2]);}
-			else{token.setAttribute('src',imgRoot+namesVec[0]);}
-		};
-	 </script>
-	 <script type="text/javascript" src="sidebar.js"> </script>
-	 <script type="text/javascript" src="locations.js"> </script>
-	 <script type="text/javascript" src="arkhamHorror.js"> </script> 
- </head>
- <body> </body>
- </html>
+<html>
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Arkham Horror</title>
+	</head>
+	<body> 
+		<script type="text/javascript" src="/scripts/jquery.js"></script>
+		<script type="text/javascript" src="/scripts/angular.js"></scripts>
+	</body>
+</html>
