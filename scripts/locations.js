@@ -12,131 +12,131 @@
 	{
 		'name': 'The Traveling Circus'
 		'id': 'circus'
-		'street' 'fields'
+		'street': 'fields'
 	},
 	{
 		'name':'Adminstration Building'
-		'id': ''
-		'street' ''
+		'id': 'admin'
+		'street': 'miskatonic'
 	},
 	{
 		'name':'Arkham Asylum'
-		'id': ''
-		'street' ''
+		'id': 'bank'
+		'street': 'downtown'
 	},
 	{
 		'name':'Bank of Arkham'
-		'id': ''
-		'street' ''
+		'id': 'bank'
+		'street': 'downtown'
 	},
 	{
 		'name': 'Black Cave'
-		'id': ''
-		'street' ''
+		'id': 'cave'
+		'street': 'rivertown'
 	},
 	{
-		'name': 'Curiosite Shoppe'
-		'id': ''
-		'street' ''
+		'name': 'Curiositie Shoppe'
+		'id': 'curiositie'
+		'street': 'northside'
 	},
 	{
 		'name': 'General Store'
-		'id': ''
-		'street' ''
+		'id': 'general'
+		'street': 'rivertown'
 	},
 	{
 		'name': 'Graveyard'
-		'id': ''
-		'street' ''
+		'id': 'graveyard'
+		'street': 'rivertown'
 	},
 	{
 		'name': 'Hibb\'s Roadhouse'
-		'id': ''
-		'street' ''
+		'id': 'hibb'
+		'street': 'easttown'
 	},
 	{
 		'name': 'Historical Society'
-		'id': ''
-		'street' ''
+		'id': 'historical'
+		'street': 'southside'
 	},
 	{
 		'name': 'Independence Square'
-		'id': ''
-		'street' ''
+		'id': 'independence'
+		'street': 'downtown'
 	},
 	{
 		'name': 'Library'
-		'id': ''
-		'street' ''
+		'id': 'library'
+		'street': 'miskatonic'
 	},
 	{
 		'name': 'Ma\'s Boarding House'
-		'id': ''
-		'street' ''
+		'id': 'ma'
+		'street': 'southside'
 	},
 	{
 		'name': 'Newspaper'
-		'id': ''
-		'street' ''
+		'id': 'newspaper'
+		'street': 'northside'
 	},
 	{
 		'name': 'Police Station'
-		'id': ''
-		'street' ''
+		'id': 'police'
+		'street': 'easttown'
 	},
 	{
 		'name': 'River Docks'
-		'id': ''
-		'street' ''
+		'id': 'docks'
+		'street': 'merchant'
 	},
 	{
 		'name': 'Science Building'
-		'id': ''
-		'street' ''
+		'id': 'science'
+		'street': 'miskatonic'
 	},
 	{
 		'name': 'South Church'
-		'id': ''
-		'street' ''
+		'id': 'church'
+		'street': 'southside'
 	},
 	{
 		'name': 'St. Mary\'s Hospital'
-		'id': ''
-		'street' ''
+		'id': 'hospital'
+		'street': 'uptown'
 	},
 	{
 		'name': 'The Unnamable'
-		'id': ''
-		'street' ''
+		'id': 'unnamable'
+		'street': 'merchant'
 	},
 	{
 		'name': 'The Witch House'
-		'id': ''
-		'street' ''
+		'id': 'witch'
+		'street': 'blue'
 	},
 	{
 		'name': 'Train Station'
-		'id': ''
-		'street' ''
+		'id': 'train'
+		'street': 'northside'
 	},
 	{
 		'name': 'Unvisited Isle'
-		'id': ''
-		'street' ''
+		'id': 'unvisited'
+		'street': 'merchant'
 	},
 	{
 		'name': 'Velma\'s Diner'
-		'id': ''
-		'street' ''
+		'id': 'velma'
+		'street': 'easttown'
 	},
 	{
 		'name': 'Woods'
-		'id': ''
-		'street' ''
+		'id': 'woods'
+		'street': 'uptown'
 	},
 	{
 		'name': 'Ye Olde Magick Shoppe'
-		'id': ''
-		'street' ''
+		'id': 'magick'
+		'street': 'uptown'
 	}
 }
