@@ -26,4 +26,18 @@
       $scope.rumor = 'I heard a rumor that the dev is actually working on this';
     }
   });
+
+  app.controller('AncientOne', function($scope){
+    $scope.name = null;
+    $scope.worshippers = null;
+    $scope.power = null;
+    $scope.doomTrack = null;
+
+    $scope.random = function() {
+      $scope.name = 'Cthulu';
+      $scope.worshippers = 'Unknown';
+      $scope.power = 'Unknown';
+      $scope.doomTrack = 10; ß
+    };
+  });
 })();
