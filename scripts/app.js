@@ -14,4 +14,16 @@
         $scope.encounter = location[enc];
       }
   });
+
+  app.controller('Mythos', function($scope){
+    $scope.headline = 'No Headline';
+    $scope.environment = 'It\'s a clear night';
+    $scope.rumor = 'Haven\'t heard anything';
+
+    $scope.getMythos = function() {
+      $scope.headline = 'Bizarre creature spotted!';
+      $scope.environment = 'Dark and stormy night';
+      $scope.rumor = 'I heard a rumor that the dev is actually working on this';
+    }
+  });
 })();
