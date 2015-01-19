@@ -32,12 +32,54 @@
     $scope.worshippers = null;
     $scope.power = null;
     $scope.doomTrack = null;
+    $scope.current=5;
+    $scope.max=10;
 
     $scope.random = function() {
       $scope.name = 'Cthulu';
       $scope.worshippers = 'Unknown';
       $scope.power = 'Unknown';
-      $scope.doomTrack = 10; ß
+      $scope.doomTrack = 10; 
     };
+  });
+
+  app.directive('doomTrack', function () {
+    return {
+        restrict: 'A',
+        template: '<ul class="token">' +
+            '<li ng-repeat="token in tokens" ng-class="token" ng-click="toggle($index)">' +
+            '\u2605' +
+            '</li>' +
+            '</ul>',
+        scope: {
+            currentValue: '=',
+            max: '=',
+            onLevelSelected: '&'
+        },
+        link: function (scope, elem, attrs) {
+
+            var updateTokens = function () {
+                scope.tokens = [];
+                for (var i = 0; i < scope.max; i++) {
+                    scope.tokens.push({
+                        filled: i < scope.currentValue
+                    });
+                }
+            };
+
+            scope.toggle = function (index) {
+                scope.currentValue = index + 1;
+                scope.onLevelSelected({
+                    doom: index + 1
+                });
+            };
+
+            scope.$watch('currentValue', function (oldVal, newVal) {
+                if (newVal) {
+                    updateTokens();
+                }
+            });
+        }
+    }
   });
 })();
