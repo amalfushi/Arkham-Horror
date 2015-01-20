@@ -2,7 +2,7 @@
  	<head>
      		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
      		<title>Arkham Horror</title>
-        <link rel="stylesheet" type="text/css" href="/styles/arkham.css"
+        <link rel="stylesheet" type="text/css" href="/styles/arkham.css"></link>
 	</head>
 	<body>
   		Arkham Horror
@@ -23,11 +23,13 @@
         <p>{{name}}</p>
         <p>{{worshippers}}</p>
         <p>{{power}}</p>
+
         <div doom-track current-value="current" max="max"
              on-level-selected="setDoomTrack(current)"></div>
         <button>More Info</button>
+        <button ng-click='random()'>Random Ancient One</button>
         <button ng-click='pickAncientOne'>Select Ancient One</button>
-        <button ng-click='random'>Random Ancient One</button>
+
       </div>
 	</body>
 	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
