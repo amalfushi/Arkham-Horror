@@ -43,6 +43,14 @@
     };
   });
 
+  app.controller('Terror', function($scope){
+    $scope.current=0;
+    $scope.max=10;
+    $scope.setTerrorTrack = function(value) {
+      $scope.current=value;
+    };
+  });
+
   app.directive('doomTrack', function () {
     return {
         restrict: 'A',
@@ -52,9 +60,9 @@
             '</li>' +
             '</ul>',
         scope: {
-            currentValue: '=',
-            max: '=',
-            onLevelSelected: '&'
+          currentValue: '=',
+          max: '=',
+          onLevelSelected: '&'
         },
         link: function (scope, elem, attrs) {
 
