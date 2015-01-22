@@ -59,6 +59,7 @@
             '\u2605' +
             '</li>' +
             '</ul>',
+        transclude: true,
         scope: {
           currentValue: '=',
           max: '=',
