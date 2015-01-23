@@ -51,6 +51,10 @@
     };
   });
 
+  app.controller('Tracker', function($scope){
+
+  });
+
   app.directive('doomTrack', function () {
     return {
         restrict: 'A',

@@ -26,17 +26,21 @@
         <p>{{worshippers}}</p>
         <p>{{power}}</p>
 
-        <div doom-track current-value="current" max="max"
-             on-level-selected="setDoomTrack(current)"></div>
+        <div id='doomTracker' ng-controller='Tracker'>
+          <div doom-track current-value="current" max="max"
+               on-level-selected="setDoomTrack(current)"></div>
+        </div>
         <button>More Info</button>
         <button ng-click='random()'>Random Ancient One</button>
         <button ng-click='pickAncientOne'>Select Ancient One</button>
 
       </div>
-      <div id='terror' ng-controller='AncientOne'>
+      <div id='terror' ng-controller='Terror'>
         <p>Terror Track</p>
-        <div doom-track current-value="current" max='max'
+        <div id='terrorTracker' ng-controller='Tracker'>
+            <div doom-track current-value="current" max='max'
              on-level-selected="setTerrorTrack(current)"></div>
+        </div>
       </div>
 	</body>
 	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
