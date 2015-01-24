@@ -48,6 +48,9 @@
     $scope.max=10;
     $scope.setTerrorTrack = function(value) {
       $scope.current=value;
+      if($scope.current === 5) {
+        alert('Close General Store');
+      }
     };
   });
 
@@ -63,7 +66,6 @@
             '\u2605' +
             '</li>' +
             '</ul>',
-        transclude: true,
         scope: {
           currentValue: '=',
           max: '=',
