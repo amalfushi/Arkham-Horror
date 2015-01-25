@@ -63,7 +63,7 @@
         restrict: 'A',
         template: '<ul class="token">' +
             '<li ng-repeat="token in tokens" ng-class="token" ng-click="toggle($index)">' +
-            '\u2605' +
+            '<img src=\'/images/ElderSign.png\'></img>' +
             '</li>' +
             '</ul>',
         scope: {
