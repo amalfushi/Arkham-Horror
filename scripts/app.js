@@ -32,8 +32,8 @@
     $scope.worshippers;
     $scope.power;
     $scope.doomTrack;
-    $scope.current=5;
-    $scope.max=10;
+    $scope.current=1;
+    $scope.max=8;
 
     $scope.random = function() {
       $scope.name = 'Cthulu';
@@ -61,11 +61,7 @@
   app.directive('doomTrack', function () {
     return {
         restrict: 'A',
-        template: '<ul class="token">' +
-            '<li ng-repeat="token in tokens" ng-class="token" ng-click="toggle($index)">' +
-            '<img src=\'/images/ElderSign.png\'></img>' +
-            '</li>' +
-            '</ul>',
+        template: '<span class="token" ng-repeat="token in tokens" ng-class="token" ng-click="toggle($index)"></span>',
         scope: {
           currentValue: '=',
           max: '=',

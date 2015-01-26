@@ -1,19 +1,10 @@
 .token {
-    color: #a9a9a9;
-    margin: 0;
-    padding: 0;
-}
-ul.token {
+    background: url('../images/doomToken.png');
+    background-position: -0px -0px;
     display: inline-block;
-}
-.token li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 1px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
+    width: 40px;
+    height: 41px
 }
 .token .filled {
-    color: red;
+    background-position: -0px -51px;
 }
