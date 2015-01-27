@@ -39,7 +39,8 @@
       $scope.name = 'Cthulu';
       $scope.worshippers = 'Unknown';
       $scope.power = 'Unknown';
-      $scope.doomTrack = 10;
+      $scope.max = 10;
+      $scope.current=5;
     };
   });
 
