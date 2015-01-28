@@ -3,9 +3,10 @@
      		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
      		<title>Arkham Horror</title>
         <link rel="stylesheet" type="text/css" href="/styles/arkham.css"></link>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 	</head>
 	<body>
-  		Arkham Horror
+    <div role='main' class='ui-content'>
   		<div id='encounter' ng-controller='Encounter'>
     			<p>{{locale}}</p>
     			<p>{{encounter.title}}</p>
@@ -42,9 +43,11 @@
              on-level-selected="setTerrorTrack(current)"></div>
         </div>
       </div>
+    </div>
 	</body>
 	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
   <script src="/scripts/locations.js"></script>
   <script src="/scripts/circus.js"></script>
 	<script src="/scripts/app.js"></script>
