@@ -6,36 +6,49 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 	</head>
 	<body>
-    <div role='main' class='ui-content'>
-  		<div id='encounter' ng-controller='Encounter'>
-    			<p>{{locale}}</p>
-    			<p>{{encounter.title}}</p>
-    			<p>{{encounter.body}}</p>
-    			<button ng-repeat="location in locations" ng-click="getEncounter(location.id)">Visit {{location.name}} </button>
+    <div data-role='page'>
 
-  		</div>
 
-      <div id='mythos' ng-controller='Mythos'>
-        <p>{{headline}}</p>
-        <p>{{environment}}</p>
-        <p>{{rumor}}</p>
-        <button ng-click="getMythos()">Mythos Card</button>
-      </div>
+      <div data-role='header'>
+        <div id='ancientOne' ng-controller='AncientOne'>
+          <p>{{name}}</p>
+          <p>{{worshippers}}</p>
+          <p>{{power}}</p>
 
-      <div id='ancientOne' ng-controller='AncientOne'>
-        <p>{{name}}</p>
-        <p>{{worshippers}}</p>
-        <p>{{power}}</p>
+          <div id='doomTracker' ng-controller='Tracker'>
+            <div doom-track current-value="current" max="max"
+                 on-level-selected="setDoomTrack(current)"></div>
+          </div>
+          <button>More Info</button>
+          <button ng-click='random()'>Random Ancient One</button>
+          <button ng-click='pickAncientOne'>Select Ancient One</button>
 
-        <div id='doomTracker' ng-controller='Tracker'>
-          <div doom-track current-value="current" max="max"
-               on-level-selected="setDoomTrack(current)"></div>
         </div>
-        <button>More Info</button>
-        <button ng-click='random()'>Random Ancient One</button>
-        <button ng-click='pickAncientOne'>Select Ancient One</button>
-
       </div>
+
+      
+        <div data-role='content'>
+           <div class="content-secondary">
+            <div id='encounter' ng-controller='Encounter'>
+                <p>{{locale}}</p>
+                <p>{{encounter.title}}</p>
+                <p>{{encounter.body}}</p>
+                <button ng-repeat="location in locations" ng-click="getEncounter(location.id)">Visit {{location.name}} </button>
+
+            </div>
+          </div>
+          <div class='content-primary'>
+            <div id='mythos' ng-controller='Mythos' >
+              <p>{{headline}}</p>
+              <p>{{environment}}</p>
+              <p>{{rumor}}</p>
+              <button ng-click="getMythos()">Mythos Card</button>
+            </div>
+          </div>
+
+        </div>
+
+
       <div id='terror' ng-controller='Terror'>
         <p>Terror Track</p>
         <div id='terrorTracker' ng-controller='Tracker'>
