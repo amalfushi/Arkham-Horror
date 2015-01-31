@@ -36,7 +36,8 @@
                   <p>{{locale}}</p>
                   <p>{{encounter.title}}</p>
                   <p>{{encounter.body}}</p>
-                  <button ng-repeat="location in locations" ng-click="getEncounter(location.id)">{{location.name}} </button>
+                  <button ng-repeat="location in locations | orderBy:'name'"
+                          ng-click="getEncounter(location.id)">{{location.name}}</button>
 
               </div>
             </div>
