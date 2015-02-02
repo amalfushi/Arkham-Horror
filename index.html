@@ -1,82 +1,83 @@
 <html ng-app='ArkhamHelper'>
- 	<head>
-     		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-     		<title>Arkham Horror</title>
-        <link rel="stylesheet" type="text/css" href="/styles/arkham.css"></link>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
-        <link rel="stylesheet" type="text/css" href="/styles/tinyscrollbar.css"></link>
-	</head>
-	<body>
-    <div data-role='page'>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Arkham Horror</title>
+  <link rel="stylesheet" type="text/css" href="/styles/arkham.css"></link>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/tinyscrollbar.css"></link>
+</head>
+<body>
+  <div data-role='page'>
 
 
-      <div data-role='header'>
-        <div id='ancientOne' ng-controller='AncientOne'>
-          <p>{{name}}</p>
-          <p>{{worshippers}}</p>
-          <p>{{power}}</p>
+    <div data-role='header'>
+      <div id='ancientOne' ng-controller='AncientOne'>
+        <p>{{name}}</p>
+        <p>{{worshippers}}</p>
+        <p>{{power}}</p>
 
-          <div id='doomTracker' ng-controller='Tracker'>
-            <div doom-track current-value="current" max="max"
-                 on-level-selected="setDoomTrack(current)"></div>
-          </div>
-          <button>More Info</button>
-          <button ng-click='random()'>Random Ancient One</button>
-          <button ng-click='pickAncientOne'>Select Ancient One</button>
-
+        <div id='doomTracker' ng-controller='Tracker'>
+          <div doom-track current-value="current" max="max"
+          on-level-selected="setDoomTrack(current)"></div>
         </div>
+        <button>More Info</button>
+        <button ng-click='random()'>Random Ancient One</button>
+        <button ng-click='pickAncientOne'>Select Ancient One</button>
+
       </div>
+    </div>
 
-        <div data-role='content' class="ui-grid-a">
-           <div class="ui-block-a" style="width:20%" >
-             <div id="scrollbar1">
-             <div class="viewport">
-               <div class='overview'>
-              <div id='encounter' ng-controller='Encounter'>
-                  <p>{{locale}}</p>
-                  <p>{{encounter.title}}</p>
-                  <p>{{encounter.body}}</p>
-                  <button ng-repeat="location in locations | orderBy:'name'"
-                          ng-click="getEncounter(location.id)">{{location.name}}</button>
-
+    <div data-role='content' class="ui-grid-a">
+      <div class="ui-block-a" style="width:20%" >
+        <div id="scrollbar1">
+          <div class="viewport">
+            <div class='overview'>
+              <div id='encounter' ng-controller='Encounter' >
+                <div ng-repeat='location in locations | unique:"street"' data-role='collapsible'>
+                  <h3>{{location.street}}</h3>
+                  <button ng-repeat="loc in locations | filter:{street:location.street}"
+                          ng-click="getEncounter(loc.id)">{{loc.name}}</button>
+                </div>
               </div>
             </div>
           </div>
-            </div>
-          </div>
         </div>
-          <div class='ui-block-b' style="width:80%">
-            <div id='mythos' ng-controller='Mythos' >
-              <p>{{headline}}</p>
-              <p>{{environment}}</p>
-              <p>{{rumor}}</p>
-              <button ng-click="getMythos()">Mythos Card</button>
-            </div>
-          </div>
+      </div>
 
+      <div class='ui-block-b' style="width:80%">
+        <div id='mythos' ng-controller='Mythos' >
+          <p>{{headline}}</p>
+          <p>{{environment}}</p>
+          <p>{{rumor}}</p>
+          <button ng-click="getMythos()">Mythos Card</button>
         </div>
+      </div>
 
+    </div>
 
+    <div data-role='footer'>
       <div id='terror' ng-controller='Terror'>
         <p>Terror Track</p>
         <div id='terrorTracker' ng-controller='Tracker'>
-            <div doom-track current-value="current" max='max'
-             on-level-selected="setTerrorTrack(current)"></div>
+          <div doom-track current-value="current" max='max'
+          on-level-selected="setTerrorTrack(current)"></div>
         </div>
       </div>
     </div>
-	</body>
-	<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-  <script src="/scripts/jquery.tinyscrollbar.min.js"></script>
-  <script src="/scripts/locations.js"></script>
-  <script src="/scripts/circus.js"></script>
-	<script src="/scripts/app.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-          $('#scrollbar1').tinyscrollbar();
-      });
-  </script>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+<script src="/scripts/jquery.tinyscrollbar.min.js"></script>
+<script src="/scripts/locations.js"></script>
+<script src="/scripts/circus.js"></script>
+<script src="/scripts/ui-utils.min.js"></script>
+<script src="/scripts/app.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#scrollbar1').tinyscrollbar();
+});
+</script>
 
 </html>

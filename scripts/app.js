@@ -1,5 +1,5 @@
 (function(){
-  var app = angular.module('ArkhamHelper',[]);
+  var app = angular.module('ArkhamHelper',['ui.unique']);
 
   app.controller('Encounter', function($scope){
       $scope.locale = null;
