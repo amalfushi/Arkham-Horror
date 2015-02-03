@@ -12,6 +12,7 @@
         var location = eval(loc);
         var enc = Math.floor(Math.random() * (location.length));
         $scope.encounter = location[enc];
+        $( "#encounterPop" ).popup('open');
       }
   });
 

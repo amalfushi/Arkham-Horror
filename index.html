@@ -38,6 +38,12 @@
                   <button ng-repeat="loc in locations | filter:{street:location.street}"
                           ng-click="getEncounter(loc.id)">{{loc.name}}</button>
                 </div>
+                <div id='encounterPop' data-role='popup' data-overlay-theme='b'>
+                  <div data-role='header' role='banner'>
+                    <h1>{{encounter.title}}</h1>
+                  </div>
+                  <p>{{encounter.body}}</p>
+                </div>
               </div>
             </div>
           </div>
