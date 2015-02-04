@@ -8,8 +8,6 @@
 </head>
 <body>
   <div data-role='page'>
-
-
     <div data-role='header'>
       <div id='ancientOne' ng-controller='AncientOne'>
         <p>{{name}}</p>
@@ -51,11 +49,21 @@
       </div>
 
       <div class='ui-block-b' style="width:80%">
-        <div id='mythos' ng-controller='Mythos' >
-          <p>{{headline}}</p>
-          <p>{{environment}}</p>
-          <p>{{rumor}}</p>
+        <div id='mythos' ng-controller='Mythos' class='ui-grid-b'>
+
           <button ng-click="getMythos()">Mythos Card</button>
+          <div id='headline' class='ui-block-a'>
+            <h1>Current Headline</h1>
+            <p>{{headline}}</p>
+          </div>
+          <div id='environment' class='ui-block-b'>
+            <h1>Environmental</h1>
+            <p>{{environment}}</p>
+          </div>
+          <div id='rumor' class='ui-block-c'>
+            <h1>Rumors</h1>
+            <p>{{rumor}}</p>
+          </div>
         </div>
       </div>
 
@@ -82,7 +90,7 @@
 <script src="/scripts/app.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-  $('#scrollbar1').tinyscrollbar();
+  $('#scrollbar1').tinyscrollbar({viewportSize:800});
 });
 </script>
 
