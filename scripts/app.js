@@ -29,7 +29,7 @@
   });
 
   app.controller('AncientOne', function($scope){
-    $scope.name;
+    $scope.name = 'Cthulu';
     $scope.worshippers;
     $scope.power;
     $scope.doomTrack;

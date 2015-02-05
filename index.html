@@ -9,19 +9,16 @@
 <body>
   <div data-role='page'>
     <div data-role='header'>
-      <div id='ancientOne' ng-controller='AncientOne'>
-        <p>{{name}}</p>
-        <p>{{worshippers}}</p>
-        <p>{{power}}</p>
-
-        <div id='doomTracker' ng-controller='Tracker'>
-          <div doom-track current-value="current" max="max"
-          on-level-selected="setDoomTrack(current)"></div>
-        </div>
-        <button>More Info</button>
-        <button ng-click='random()'>Random Ancient One</button>
-        <button ng-click='pickAncientOne'>Select Ancient One</button>
-
+        <div id='ancientOne' ng-controller='AncientOne' class='ui-grid-a'>
+          <div class='ui-block-a'>
+            {{name}}
+          </div>
+          <div class='ui-block-b'>
+            <div id='doomTracker' ng-controller='Tracker'>
+              <div doom-track current-value="current" max="max"
+              on-level-selected="setDoomTrack(current)"></div>
+            </div>
+          </div>
       </div>
     </div>
 
