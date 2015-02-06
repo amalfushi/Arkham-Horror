@@ -67,11 +67,21 @@
     </div>
 
     <div data-role='footer'>
-      <div id='terror' ng-controller='Terror'>
-        <p>Terror Track</p>
-        <div id='terrorTracker' ng-controller='Tracker'>
-          <div doom-track current-value="current" max='max'
-          on-level-selected="setTerrorTrack(current)"></div>
+      <div id='terror' ng-controller='Terror' class='ui-grid-a'>
+        <div class='ui-block-a' style="width:20%">
+          <p>Terror Track</p>
+        </div>
+        <div>
+          <div class='terror' style='display: inline-block' onclick='$(this).toggleClass("strikethrough");'>1</div>
+          <div class='terror' style='display: inline-block'>2</div>
+          <div class='terror store' style='display: inline-block'>3</div>
+          <div class='terror' style='display: inline-block'>4</div>
+          <div class='terror' style='display: inline-block'>5</div>
+          <div class='terror store' style='display: inline-block'>6</div>
+          <div class='terror' style='display: inline-block'>7</div>
+          <div class='terror' style='display: inline-block'>8</div>
+          <div class='terror store' style='display: inline-block'>9</div>
+          <div class='terror' style='display: inline-block'>10</div>
         </div>
       </div>
     </div>

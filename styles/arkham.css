@@ -9,3 +9,41 @@
 .filled {
     background-position: -0px -51px;
 }
+
+.terror{
+  width:20px;
+  height:30px;
+  border-radius:10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px; 
+  font-size:20px;
+  color:#000;
+  line-height:30px;
+  text-align:center;
+  background:#D0D0D0
+}
+
+.store{
+  background:#FF9900
+}
+
+.strikethrough {
+  position: relative;
+}
+
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 40%;
+  right: 0;
+  border-top: 4px solid;
+  border-color: red;
+
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
