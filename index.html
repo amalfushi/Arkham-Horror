@@ -71,17 +71,17 @@
         <div class='ui-block-a' style="width:20%">
           <p>Terror Track</p>
         </div>
-        <div>
-          <div class='terror' style='display: inline-block' onclick='$(this).toggleClass("strikethrough");'>1</div>
-          <div class='terror' style='display: inline-block'>2</div>
-          <div class='terror store' style='display: inline-block'>3</div>
-          <div class='terror' style='display: inline-block'>4</div>
-          <div class='terror' style='display: inline-block'>5</div>
-          <div class='terror store' style='display: inline-block'>6</div>
-          <div class='terror' style='display: inline-block'>7</div>
-          <div class='terror' style='display: inline-block'>8</div>
-          <div class='terror store' style='display: inline-block'>9</div>
-          <div class='terror' style='display: inline-block'>10</div>
+        <div class='terror'>
+          <div>1</div>
+          <div>2</div>
+          <div class='store'>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div class='store'>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div class='store'>9</div>
+          <div>10</div>
         </div>
       </div>
     </div>
@@ -98,6 +98,9 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $('#scrollbar1').tinyscrollbar({viewportSize:800});
+  $('.terror > div').click(function() {
+    $(this).toggleClass('strikethrough');
+  });
 });
 </script>
 
