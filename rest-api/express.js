@@ -19,6 +19,17 @@ app.get('/', function(req, res, next) {
   res.send('please select a collection, e.g., /collections/messages')
 })
 
+app.post('/game/start', function(req, res,next) {
+  res.send({x:1});
+});
+
+app.get('/locations/getall', function(req, res, next) {
+  db.collection('location').find({}, {limit:10}).toArray(function(e, results){
+    if(e) return next(e);
+    res.send(results);
+  });
+});
+
 app.get('/collections/:collectionName', function(req, res, next) {
   req.collection.find({} ,{limit: 10, sort: {'_id': -1}}).toArray(function(e, results){
     if (e) return next(e)
