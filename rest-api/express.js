@@ -10,8 +10,8 @@ app.use(logger('dev'))
 
 var db = mongoskin.db('mongodb://@localhost:27017/arkham', {safe:true})
 
-app.param('collectionName', function(req, res, next, collectionName){
-  req.collection = db.collection(collectionName)
+app.param('location', function(req, res, next, loc){
+  req.location = loc
   return next()
 })
 
@@ -23,8 +23,15 @@ app.post('/game/start', function(req, res,next) {
   res.send({x:1});
 });
 
-app.get('/locations/getall', function(req, res, next) {
+app.get('/locations', function(req, res, next) {
   db.collection('location').find({}, {limit:10}).toArray(function(e, results){
+    if(e) return next(e);
+    res.send(results);
+  });
+});
+
+app.get('/encounters/:location', function(req, res, next) {
+  db.collection('encounters').find({location:'circus'}, {limit:10}).toArray(function(e, results){
     if(e) return next(e);
     res.send(results);
   });

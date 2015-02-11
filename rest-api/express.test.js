@@ -9,14 +9,23 @@ describe('express rest api server', function(){
     superagent.post(host+'game/start')
       .send({})
       .end(function(e, res){
-        console.log(res.body);
         done();
       });
   });
 
   //get locations
   it('retrieves an object', function(done){
-    superagent.get(host+'locations/getall')
+    superagent.get(host+'locations')
+      .end(function(e, res){
+        expect(e).to.eql(null)
+        expect(typeof res.body).to.eql('object')
+        expect(res.body.length).to.eql(1);
+        done()
+      })
+  });
+  //get encounters
+  it('retrieves an object', function(done){
+    superagent.get(host+'encounters/circus')
       .end(function(e, res){
         expect(e).to.eql(null)
         expect(typeof res.body).to.eql('object')
@@ -24,7 +33,7 @@ describe('express rest api server', function(){
         done()
       })
   })
-  //get encounters
+
   //get possible ancient ones
   //get specific ancient one info
   //set ancient one
