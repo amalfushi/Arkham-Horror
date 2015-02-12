@@ -35,6 +35,15 @@ describe('express rest api server', function(){
   })
 
   //get possible ancient ones
+  it('retrieves an object', function(done) {
+    superagent.get(host+'ancients')
+      .end(function(e, res) {
+        expect(e).to.eql(null);
+        expect(typeof res.body).to.eql('object');
+        expect(res.body.length).to.eql(4);
+        done();
+      });
+  });
   //get specific ancient one info
   //set ancient one
   //get mythos card
