@@ -44,7 +44,17 @@ describe('express rest api server', function(){
         done();
       });
   });
+
   //get specific ancient one info
+  it('retrieves an object', function(done) {
+    superagent.get(host+'ancients/Cthulu')
+      .end(function(e, res) {
+        expect(e).to.eql(null);
+        expect(typeof res.body).to.eql('object');
+        expect(res.body.name).to.eql('Cthulu');
+        done();
+      });
+  });
   //set ancient one
   //get mythos card
   //get encounter

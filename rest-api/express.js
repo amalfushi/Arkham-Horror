@@ -15,6 +15,11 @@ app.param('location', function(req, res, next, loc){
   return next()
 })
 
+app.param('ancient', function(req, res, next, ancient){
+  req.ancientOne = ancient
+  return next()
+})
+
 app.get('/', function(req, res, next) {
   res.send('please select a collection, e.g., /collections/messages')
 })
@@ -42,6 +47,13 @@ app.get('/ancients', function(req, res, next) {
     if(e) return next(e);
     res.send(results);
   })
+});
+
+app.get('/ancients/:ancient', function(req, res, next) {
+  db.collection('ancients').findOne({name:req.ancientOne}, function(e, results){
+    if(e) return next(e);
+    res.send(results);
+  });
 });
 
 app.listen(3000, function(){
