@@ -29,7 +29,7 @@
   });
 
   app.controller('AncientOne', function($scope){
-    $scope.name = 'Cthulu';
+    $scope.name;
     $scope.worshippers;
     $scope.power;
     $scope.doomTrack;
@@ -37,11 +37,12 @@
     $scope.max=8;
 
     $scope.random = function() {
-      $scope.name = 'Cthulu';
-      $scope.worshippers = 'Unknown';
-      $scope.power = 'Unknown';
-      $scope.max = 10;
-      $scope.current=5;
+      $.ajax({
+        url:'http://localhost:3000/ancients/Cthulu'
+      }).
+      done(function(result) {
+        $scope.name = result.name
+      })
     };
   });
 
