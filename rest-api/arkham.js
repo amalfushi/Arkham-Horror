@@ -10,6 +10,12 @@ app.use(logger('dev'))
 
 var db = mongoskin.db('mongodb://@localhost:27017/arkham', {safe:true})
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://arkham-horror.dev");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.param('location', function(req, res, next, loc){
   req.location = loc
   return next()
