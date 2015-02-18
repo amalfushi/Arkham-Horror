@@ -3,10 +3,8 @@
 
   app.controller('Encounter', function($scope){
       $scope.locale = null;
-
       $scope.encounter = null;
-
-      $scope.locations = locations;
+      $scope.locations = localStorage.getItem(JSON.parse('locations'));
       $scope.getEncounter = function(loc){
         $scope.locale = loc;
         var location = eval(loc);
@@ -96,4 +94,18 @@
         }
     }
   });
+
+  var init = function() {
+    var foo = localStorage.getItem('locations');
+    if(foo === null) {
+      $.ajax({
+        url:'http://localhost:3000/locations'
+      }).
+      done(function(result) {
+        localStorage.setItem('locations', JSON.stringify(result));
+      })
+    }
+  };
+
+  init();
 })();
