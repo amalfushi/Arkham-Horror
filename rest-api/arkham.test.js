@@ -1,11 +1,11 @@
 var superagent = require('superagent')
 var expect = require('expect.js')
 
-describe('express rest api server', function(){
+describe('Arkham Rest API', function(){
   var id;
   var host = 'http://localhost:3000/'
   //start game
-  it('post object', function(done){
+  it('Start a Game', function(done){
     superagent.post(host+'game/start')
       .send({})
       .end(function(e, res){
@@ -14,7 +14,7 @@ describe('express rest api server', function(){
   });
 
   //get locations
-  it('retrieves an object', function(done){
+  it('Get all locations', function(done){
     superagent.get(host+'locations')
       .end(function(e, res){
         expect(e).to.eql(null)
@@ -24,7 +24,7 @@ describe('express rest api server', function(){
       })
   });
   //get encounters
-  it('retrieves an object', function(done){
+  it('get encounters', function(done){
     superagent.get(host+'encounters/circus')
       .end(function(e, res){
         expect(e).to.eql(null)
@@ -35,7 +35,7 @@ describe('express rest api server', function(){
   })
 
   //get possible ancient ones
-  it('retrieves an object', function(done) {
+  it('Get Ancient Ones', function(done) {
     superagent.get(host+'ancients')
       .end(function(e, res) {
         expect(e).to.eql(null);
@@ -46,7 +46,7 @@ describe('express rest api server', function(){
   });
 
   //get specific ancient one info
-  it('retrieves an object', function(done) {
+  it('Get Ancient One Details', function(done) {
     superagent.get(host+'ancients/Cthulu')
       .end(function(e, res) {
         expect(e).to.eql(null);

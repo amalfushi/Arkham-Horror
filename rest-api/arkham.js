@@ -2,13 +2,16 @@ var express = require('express'),
   mongoskin = require('mongoskin'),
   bodyParser = require('body-parser')
   logger = require('morgan')
+  mongojs = require('mongojs')
 
 var app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(logger('dev'))
 
-var db = mongoskin.db('mongodb://@localhost:27017/arkham', {safe:true})
+var conn = 'mongodb://@localhost:27017/arkham'
+
+var db = mongoskin.db(conn, {safe:true})
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://arkham-horror.dev");
@@ -35,10 +38,13 @@ app.post('/game/start', function(req, res,next) {
 });
 
 app.get('/locations', function(req, res, next) {
-  db.collection('location').find({}, {limit:10}).toArray(function(e, results){
+
+  var m = mongojs(conn);
+  m.collection('encounters').distinct('location',[], function(e, results) {
     if(e) return next(e);
     res.send(results);
   });
+
 });
 
 app.get('/encounters/:location', function(req, res, next) {
