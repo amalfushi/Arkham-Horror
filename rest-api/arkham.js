@@ -42,6 +42,7 @@ app.get('/locations', function(req, res, next) {
   var m = mongojs(conn);
   m.collection('encounters').distinct('location',[], function(e, results) {
     if(e) return next(e);
+    res.setHeader('Content-Type', 'application/json');
     res.send(results);
   });
 

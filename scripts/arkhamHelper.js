@@ -4,7 +4,7 @@
   app.controller('Encounter', function($scope){
       $scope.locale = null;
       $scope.encounter = null;
-      $scope.locations = localStorage.getItem(JSON.parse('locations'));
+      $scope.locations = JSON.parse(localStorage.getItem('locations'));
       $scope.getEncounter = function(loc){
         $scope.locale = loc;
         var location = eval(loc);
