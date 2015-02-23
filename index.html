@@ -9,15 +9,12 @@
 <body>
   <div data-role='page'>
     <div data-role='header'>
-        <div id='ancientOne' ng-controller='AncientOne' class='ui-grid-a'>
+        <div id='ancientOne' class='ui-grid-a'>
           <div class='ui-block-a'>
-            <button ng-click='random()'>Ancient One:</button>
-            {{name}}
+            <button>Ancient One:</button>
           </div>
           <div class='ui-block-b'>
-            <div id='doomTracker' ng-controller='Tracker'>
-              <div doom-track current-value="current" max="max"
-              on-level-selected="setDoomTrack(current)"></div>
+            <div id='doomTracker'>
             </div>
           </div>
       </div>
@@ -25,31 +22,26 @@
 
     <div data-role='content' class="ui-grid-a">
       <div class="ui-block-a" style="width:20%" >
-        <div id="scrollbar1">
-          <div class="viewport">
             <div class='overview'>
-              <div id='encounter' ng-controller='Encounter' >
-                <div ng-repeat='location in locations | unique:"street"' data-role='collapsible'>
+              <div id='encounter'>
+                <div data-role='collapsible'>
                   <h3>{{location.street}}</h3>
-                  <button ng-repeat="loc in locations | filter:{street:location.street}"
-                          ng-click="getEncounter(loc.id)">{{loc.name}}</button>
+                  <button>{{loc.name}}</button>
                 </div>
-                <div id='encounterPop' data-role='popup' data-overlay-theme='b'>
+                <div>
                   <div data-role='header' role='banner'>
-                    <h1>{{encounter.title}}</h1>
+                    <h1></h1>
                   </div>
-                  <p>{{encounter.body}}</p>
+                  <p></p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
       </div>
 
       <div class='ui-block-b' style="width:80%">
-        <div id='mythos' ng-controller='Mythos' class='ui-grid-b'>
+        <div id='mythos' class='ui-grid-b'>
 
-          <button ng-click="getMythos()">Mythos Card</button>
+          <button>Mythos Card</button>
           <div id='headline' class='ui-block-a'>
             <h1>Current Headline</h1>
             <p>{{headline}}</p>
