@@ -7,3 +7,13 @@ var DoomTrack = React.createClass({displayName:'DoomTrack',
     );
   }
 });
+
+var Locations = React.createClass({displayName:'Location',
+  render: function() {
+    return (
+      <div className='Location'>
+        Da Streets
+      </div>
+    );
+  }
+});
