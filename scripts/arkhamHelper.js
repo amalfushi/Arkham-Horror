@@ -1,11 +1,11 @@
-var DoomTrack = React.createClass({displayName:'DoomTrack',
+var DoomTrack = React.createClass({
   render: function() {
-    return (
-      <div className='doomTrack'>
-        DOOOOOOM
-      </div>
-    );
-  }
+  return (
+    <div className="doomTrack">
+      
+    </div>
+  );
+}
 });
 
 var Locations = React.createClass({displayName:'Location',
