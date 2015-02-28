@@ -17,3 +17,13 @@ var Locations = React.createClass({displayName:'Location',
     );
   }
 });
+
+var Mythos = React.createClass({
+  render: function() {
+    return (
+      <div className='Mythos'>
+        Mythos
+      </div>
+    );
+  }
+});
