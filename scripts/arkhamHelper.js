@@ -27,3 +27,13 @@ var Mythos = React.createClass({
     );
   }
 });
+
+var TerrorTrack = React.createClass({
+  render: function() {
+    return (
+      <div className='Terror'>
+        Terror
+      </div>
+    );
+  }
+});
