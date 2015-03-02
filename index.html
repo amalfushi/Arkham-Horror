@@ -3,93 +3,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Arkham Horror</title>
   <link rel="stylesheet" type="text/css" href="/styles/arkham.css"></link>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/tinyscrollbar.css"></link>
 </head>
 <body>
-  <div data-role='page'>
-    <div data-role='header'>
-        <div id='ancientOne' class='ui-grid-a'>
-          <div class='ui-block-a'>
-            <button>Ancient One:</button>
-          </div>
-          <div class='ui-block-b'>
-            <div id='doomTracker'>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <div data-role='content' class="ui-grid-a">
-      <div class="ui-block-a" style="width:20%" >
-            <div class='overview'>
-              <div id='encounter'>
-                <div data-role='collapsible'>
-                  <h3>{{location.street}}</h3>
-                  <button>{{loc.name}}</button>
-                </div>
-                <div>
-                  <div data-role='header' role='banner'>
-                    <h1></h1>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-      </div>
-
-      <div class='ui-block-b' style="width:80%">
-        <div id='mythos' class='ui-grid-b'>
-
-          <button>Mythos Card</button>
-          <div id='headline' class='ui-block-a'>
-            <h1>Current Headline</h1>
-            <p>{{headline}}</p>
-          </div>
-          <div id='environment' class='ui-block-b'>
-            <h1>Environmental</h1>
-            <p>{{environment}}</p>
-          </div>
-          <div id='rumor' class='ui-block-c'>
-            <h1>Rumors</h1>
-            <p>{{rumor}}</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div data-role='footer'>
-      <div id='terror' ng-controller='Terror' class='ui-grid-a'>
-        <div class='ui-block-a' style="width:20%">
-          <p>Terror Track</p>
-        </div>
-        <div class='terror'>
-          <div>1</div>
-          <div>2</div>
-          <div class='store'>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div class='store'>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div class='store'>9</div>
-          <div>10</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js'></script>
-
 <script src="/scripts/arkhamHelper.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  $('.terror > div').click(function() {
-    $(this).toggleClass('strikethrough');
-  });
-});
-</script>
-
 </html>
