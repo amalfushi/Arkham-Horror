@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
-var DoomTrack = react.createClass({
+var DoomTrack = React.createClass({
   render: function() {
-    
+
   }
 })
 

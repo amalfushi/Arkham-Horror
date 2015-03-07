@@ -1,10 +1,18 @@
 /** @jsx React.DOM */
-var Locations = React.createClass({displayName:'Locations',
+var Location = React.createClass({displayName:'Location',
   render: function() {
     return (
       <div className='Location'>
-        Da Streets
+        Blue Street
       </div>
+    );
+  }
+});
+
+var Locations = React.createClass({displayName:'Locations',
+  render: function() {
+    return (
+      <Location/>
     );
   }
 });
