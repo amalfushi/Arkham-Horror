@@ -1,9 +1,13 @@
 /** @jsx React.DOM */
+var getLocations = function() {
+  return ['School','Woods'];
+};
+
 var Location = React.createClass({displayName:'Location',
   render: function() {
     return (
       <div className='Location'>
-        Blue Street
+        {this.props.name}
       </div>
     );
   }
@@ -12,7 +16,7 @@ var Location = React.createClass({displayName:'Location',
 var Locations = React.createClass({displayName:'Locations',
   render: function() {
     return (
-      <Location/>
+        <Location/>
     );
   }
 });
