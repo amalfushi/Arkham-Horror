@@ -1,4 +1,14 @@
 /** @jsx React.DOM */
+var Environment = React.createClass({
+  render: function() {
+    return (
+      <div className='environment'>
+        Environment
+      </div>
+    );
+  }
+})
+
 var Mythos = React.createClass({
   render: function() {
     return (
