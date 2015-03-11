@@ -7,18 +7,12 @@ var Location = React.createClass({displayName:'Location',
   render: function() {
     return (
       <div className='Location'>
-        {this.props.name}
+         {this.props.name}
       </div>
     );
   }
 });
 
-var Locations = React.createClass({displayName:'Locations',
-  render: function() {
-    return (
-        <Location/>
-    );
-  }
-});
-
-React.render(<Locations/>, document.getElementById('locations'));
+React.render(<div>{getLocations().map(function(loc, i){
+        return <Location name={loc} key={i} />;
+    })}</div>, document.getElementById('locations'));
