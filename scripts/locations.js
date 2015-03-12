@@ -1,13 +1,18 @@
 /** @jsx React.DOM */
 var loadLocations = function () {
-  localStorage['locations'] = ['School', 'Woods'];
-}
+  console.log('1');
+  var data = JSON.stringify(['School', 'Woods']);
+  console.log(data);
+  localStorage.setItem('locations', data);
+};
 
 var getLocations = function() {
-  if(localStorage.getItem('locations') == null || localStorage['locations'].length === 0) {
+
+  //return ['Woods'];
+  if(localStorage.getItem('locations') == null || localStorage.getItem('locations').length === 0) {
     loadLocations();
   }
-  return localStorage['locations'];
+  return JSON.parse( localStorage.getItem('locations'));
 };
 
 var Location = React.createClass({displayName:'Location',
