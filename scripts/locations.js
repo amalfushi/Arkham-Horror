@@ -1,30 +1,23 @@
 /** @jsx React.DOM */
-var loadLocations = function () {
-  console.log('1');
-  var data = JSON.stringify(['School', 'Woods']);
-  console.log(data);
-  localStorage.setItem('locations', data);
-};
-
-var getLocations = function() {
-
-  //return ['Woods'];
-  if(localStorage.getItem('locations') == null || localStorage.getItem('locations').length === 0) {
-    loadLocations();
-  }
-  return JSON.parse( localStorage.getItem('locations'));
-};
-
-var Location = React.createClass({displayName:'Location',
+var Location = React.createClass({
+  loadLocations: function() {
+    var data = JSON.stringify(['School', 'Woods']);
+    localStorage.setItem('locations', data);
+  },
+  getLocations: function() {
+    //return ['Woods'];
+    if(localStorage.getItem('locations') == null || localStorage.getItem('locations').length === 0) {
+      this.loadLocations();
+    }
+    return JSON.parse( localStorage.getItem('locations'));
+  },
   render: function() {
     return (
-      <div className='Location'>
-         {this.props.name}
-      </div>
+      <div>{this.getLocations().map(function(loc, i){
+              return <div>{loc}</div>;
+          })}</div>
     );
   }
 });
 
-React.render(<div>{getLocations().map(function(loc, i){
-        return <Location name={loc} key={i} />;
-    })}</div>, document.getElementById('locations'));
+React.render(<Location/>, document.getElementById('locations'));
