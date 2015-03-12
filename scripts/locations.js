@@ -1,6 +1,13 @@
 /** @jsx React.DOM */
+var loadLocations = function () {
+  localStorage['locations'] = ['School', 'Woods'];
+}
+
 var getLocations = function() {
-  return ['School','Woods'];
+  if(localStorage.getItem('locations') == null || localStorage['locations'].length === 0) {
+    loadLocations();
+  }
+  return localStorage['locations'];
 };
 
 var Location = React.createClass({displayName:'Location',
