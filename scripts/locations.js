@@ -11,7 +11,7 @@ var Neighborhood = React.createClass({
     return (<details>
               <summary>{this.props.name}</summary>
               {this.getLocation(this.props.name).map(function(loc, i){
-                  return <div>{loc}</div>
+                  return <button>{loc}</button>
               })}
             </details>);
   }
