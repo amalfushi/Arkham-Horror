@@ -7,11 +7,14 @@ var Neighborhood = React.createClass({
     data['Woods' ] = ['Scary', 'Friendly']
     return data[loc];
   },
+  locationClick: function(loc) {
+    alert('Foo');
+  },
   render: function() {
     return (<details>
               <summary>{this.props.name}</summary>
               {this.getLocation(this.props.name).map(function(loc, i){
-                  return <button>{loc}</button>
+                  return <div onClick={this.locationClick}>{loc}</div>
               })}
             </details>);
   }
