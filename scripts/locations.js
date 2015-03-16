@@ -8,13 +8,15 @@ var Neighborhood = React.createClass({
     return data[loc];
   },
   locationClick: function(loc) {
-    alert('Foo');
+    alert(loc);
   },
   render: function() {
     return (<details>
               <summary>{this.props.name}</summary>
               {this.getLocation(this.props.name).map(function(loc, i){
-                  return <div onClick={this.locationClick}>{loc}</div>
+                  return (
+                    <div onClick={this.locationClick.bind(this, loc)} key={i}>{loc}</div>
+                  );
               })}
             </details>);
   }
@@ -36,7 +38,7 @@ var Neighborhoods = React.createClass({
   render: function() {
     return (
       <div>{this.getLocations().map(function(loc, i){
-              return <Neighborhood name={loc}/>
+              return <Neighborhood name={loc} key={i}/>
           })}</div>
     );
   }
