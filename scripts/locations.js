@@ -1,11 +1,17 @@
 /** @jsx React.DOM */
 
 var Neighborhood = React.createClass({
-  getLocation: function(loc) {
+  getDefaultProps: function() {
     var data = new Array();
     data['School'] = ['Upper', 'Lower'];
     data['Woods' ] = ['Scary', 'Friendly']
-    return data[loc];
+    return {
+      data: data
+    }
+  },
+  getLocation: function(loc) {
+
+    return this.props.data[loc];
   },
   locationClick: function(loc) {
     alert(loc);
