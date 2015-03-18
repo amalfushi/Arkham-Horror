@@ -9,6 +9,16 @@ var Environment = React.createClass({
   }
 })
 
+var Rumor = React.createClass({
+  render: function() {
+    return (
+      <div className='rumor'>
+        Rumors
+      </div>
+    );
+  }
+})
+
 var Mythos = React.createClass({
   render: function() {
     return (
