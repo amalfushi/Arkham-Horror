@@ -19,6 +19,16 @@ var Rumor = React.createClass({
   }
 })
 
+var HeadLine = React.createClass({
+  render: function() {
+    return (
+      <div className='Headline'>
+        Headline
+      </div>
+    );
+  }
+})
+
 var Mythos = React.createClass({
   render: function() {
     return (
