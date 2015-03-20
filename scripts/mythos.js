@@ -19,7 +19,7 @@ var Rumor = React.createClass({
   }
 })
 
-var HeadLine = React.createClass({
+var Headline = React.createClass({
   render: function() {
     return (
       <div className='Headline'>
@@ -33,7 +33,10 @@ var Mythos = React.createClass({
   render: function() {
     return (
       <div className='Mythos'>
-        Mythos
+        <div onClick=''>Draw Mythos Card</div>
+        <Headline/>
+        <Environment/>
+        <Rumor/>
       </div>
     );
   }
