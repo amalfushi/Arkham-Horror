@@ -1,17 +1,17 @@
 /** @jsx React.DOM */
 
 var Neighborhood = React.createClass({
-  getDefaultProps: function() {
+  loadLocation: function(loc) {
+    localStorage.clear();
     var data = new Array();
-    data['School'] = ['Upper', 'Lower'];
-    data['Woods' ] = ['Scary', 'Friendly']
-    return {
-      data: data
-    }
+    localStorage.setItem('School', JSON.stringify(['Upper', 'Lower']));
+    localStorage.setItem('Woods', JSON.stringify(['Scary', 'Friendly']));    
   },
   getLocation: function(loc) {
-
-    return this.props.data[loc];
+    if(localStorage.getItem(loc) === null || localStorage.getItem(loc).length === 0) {
+      this.loadLocation(loc);
+    }
+    return JSON.parse(localStorage.getItem(loc));
   },
   locationClick: function(loc) {
     alert(loc);
