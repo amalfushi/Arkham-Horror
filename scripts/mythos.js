@@ -30,10 +30,13 @@ var Headline = React.createClass({
 })
 
 var Mythos = React.createClass({
+  drawCard: function() {
+
+  },
   render: function() {
     return (
       <div className='Mythos'>
-        <div onClick=''>Draw Mythos Card</div>
+        <div onClick='{this.drawCard}'>Draw Mythos Card</div>
         <Headline/>
         <Environment/>
         <Rumor/>
