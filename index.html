@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/arkham.css"></link>
 </head>
 <body>
+  <div id='setup'></div>
   <div id='ancientOne'></div>
   <div id='locations'></div>
   <div id='mythos'></div>
@@ -14,9 +15,10 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js'></script>
 <script>
-  console.warn('Clearing local storage for testing purposes'); 
+  console.warn('Clearing local storage for testing purposes');
   localStorage.clear();
 </script>
+<script type='text/jsx' src="/scripts/setup.js"></script>
 <script type='text/jsx' src="/scripts/ancientOne.js"></script>
 <script type='text/jsx' src="/scripts/locations.js"></script>
 <script type='text/jsx' src="/scripts/mythos.js"></script>
