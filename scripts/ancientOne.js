@@ -1,13 +1,13 @@
 /** @jsx React.DOM */
 var DoomTrack = React.createClass({
   render: function() {
-
+    return <div>Doom Track</div>
   }
 })
 
 var AncientOne = React.createClass({
   render: function() {
-    return <p>Ancient One!!</p>;
+    return <div><DoomTrack/></div>
   }
 });
 
