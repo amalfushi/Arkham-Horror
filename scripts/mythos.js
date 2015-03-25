@@ -30,8 +30,18 @@ var Headline = React.createClass({
 })
 
 var Mythos = React.createClass({
+  loadCards: function() {
+    var data = ['An environment', 'A headline', 'A rumor'];
+    console.log(data.length);
+    localStorage.setItem('Mythos', JSON.stringify(data));
+  },
   drawCard: function() {
-    alert('Card');
+    if(localStorage.getItem('Mythos') == null || localStorage.getItem('Mythos').length === 0) {
+      this.loadCards();
+    }
+    var cards = JSON.parse( localStorage.getItem('Mythos'));
+    var x = Math.floor(Math.random() * cards.length);
+    console.log(cards[x]);
   },
   render: function() {
     return (
